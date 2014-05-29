@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+.left
+{
+float:left;
+width:100px;
+}
+
+.right
+{
+	position:relative;
+	display: table-cell;
+   	vertical-align: middle;
+}
+div.table-cell {
+    height:400px; /* can be anything, even in percentage*/
+    width:100%;
+    display:table-cell;
+    vertical-align:middle;   /* key here */
+}

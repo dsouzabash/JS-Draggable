@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src ="../js/control.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<title>JS Test</title>
+</head>
+<body onload="init()">
+
+<table>
+	<tr>
+		<td>
+			<div class="left" id="left" draggable="true" ondragstart="drag(event)">
+				<canvas class="numberCanvas" width="50" height="50" style="border:1px solid #d3d3d3;">
+				</canvas>
+			</div>
+		</td>
+		
+		<td style="vertical-align:middle">
+			<div class="right">
+				<table>
+					<script>
+						for(var i=1; i<=3; i++){
+							document.write("<tr><td>");
+							document.write("<canvas id=" +i+" ondrop=\"drop(event)\" ondragover=\"allowDrop(event)\" class=\"numberCanvas\" width=\"50\" height=\"50\" style=\"border:1px solid #d3d3d3;\">");
+							document.write("</canvas></td></tr>");	
+						}
+					</script>
+				</table>	
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Total: <span id='Total'>
+			</span>	
+		</td>		
+	</tr>
+</table>
+</body>
+</html>
